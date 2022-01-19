@@ -12,7 +12,7 @@
          v-bind:class="{active: activeSection == index}"
          v-on:click="scrollToSection(index)"
          v-for="(offset, index) in offsets"
-         v-bind:key="index">Text
+         v-bind:key="index">{{menuString[index]}}
       </span>
       </div>
       <!-- <span
@@ -51,6 +51,12 @@ export default {
     inMove: false,
     activeSection: 0,
     offsets: [],
+    menuString: [
+      "Home",
+      "About",
+      "Portofolio",
+      "Contact"
+    ],
     touchStartY: 0
   };
   },
@@ -265,7 +271,7 @@ h1.black {
   /* height: 20px; */
   /* background-color: #FFF; */
   display: inline-block;
-  margin: 2rem 3rem 1rem 3rem;
+  margin: 2rem 4rem 1rem 4rem;
   opacity: .6;
   transition: .4s ease all;
   cursor: pointer;
