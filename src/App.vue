@@ -6,13 +6,23 @@
     </div>
     <router-view/> -->
     <div class="sections-menu">
-      <span
+      <div class="left-div">
+        <span
          class="menu-point"
          v-bind:class="{active: activeSection == index}"
          v-on:click="scrollToSection(index)"
          v-for="(offset, index) in offsets"
-         v-bind:key="index">
+         v-bind:key="index">Text
       </span>
+      </div>
+      <!-- <span
+         class="menu-point"
+         v-bind:class="{active: activeSection == index}"
+         v-on:click="scrollToSection(index)"
+         v-for="(offset, index) in offsets"
+         v-bind:key="index">Text
+      </span> -->
+      
     </div>
     <section class="fullpage blue">
       <h1>Vue.js Fullpage Scroll</h1>
@@ -35,7 +45,7 @@
 
 <script>
 export default {
-  // el: '#app',
+  el: '#app',
   data: function(){
     return {
     inMove: false,
@@ -226,22 +236,34 @@ h1.black {
   color: #000;
 }
 
+
+
 .sections-menu {
+  /* align-items: center; */
+
   position: fixed;
-  right: 50%;
-  top: 50%;
+  /* left: 50%; */
+  top: 1rem;
+  width: 100%;
+  background-color: #FFF;
+
   /* right: 1rem;
   top: 50%; */
   transform: translateY(-50%);
 }
-
+.left-div {
+  width: 10%;
+  height: 20px;
+  float: right;
+  background-color: rgb(11, 55, 99);
+}
 .sections-menu .menu-point {
   
   width: 10px;
   height: 10px;
-  background-color: #FFF;
+  /* background-color: #FFF; */
   display: inline-block;
-  margin: 1rem 1rem 1rem 1rem;
+  margin: 1rem 3rem 1rem 3rem;
   opacity: .6;
   transition: .4s ease all;
   cursor: pointer;
