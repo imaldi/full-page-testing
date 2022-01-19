@@ -6,7 +6,7 @@
     </div>
     <router-view/> -->
     <div class="sections-menu">
-      <div class="left-div">
+      <div class="right-div">
         <span
          class="menu-point"
          v-bind:class="{active: activeSection == index}"
@@ -45,7 +45,7 @@
 
 <script>
 export default {
-  el: '#app',
+  // el: '#app',
   data: function(){
     return {
     inMove: false,
@@ -245,25 +245,27 @@ h1.black {
   /* left: 50%; */
   top: 1rem;
   width: 100%;
+  /* height: 20px; */
+
   background-color: #FFF;
 
   /* right: 1rem;
   top: 50%; */
   transform: translateY(-50%);
 }
-.left-div {
-  width: 10%;
-  height: 20px;
+.right-div {
+  width: 50%;
+  /* height: 20px; */
   float: right;
-  background-color: rgb(11, 55, 99);
+  background-color: #FFF;
 }
-.sections-menu .menu-point {
+.sections-menu .right-div .menu-point {
   
   width: 10px;
-  height: 10px;
+  /* height: 20px; */
   /* background-color: #FFF; */
   display: inline-block;
-  margin: 1rem 3rem 1rem 3rem;
+  margin: 2rem 3rem 1rem 3rem;
   opacity: .6;
   transition: .4s ease all;
   cursor: pointer;
