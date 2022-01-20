@@ -5,6 +5,7 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/> -->
+    
     <div class="sections-menu">
       <div class="right-div">
         <span
@@ -27,6 +28,7 @@
     <section class="fullpage blue">
       <h1>Vue.js Fullpage Scroll</h1>
       <p>by <a href="https://webdeasy.de/?referer=cp-NVOEBL" target="_blank">WebDEasy</a></p>
+      <HelloWorld msg="Welcome to Your Vue.js App"/>
     </section>
     <section class="fullpage black">
       <h1>Section 2</h1>
@@ -44,8 +46,14 @@
 </template>
 
 <script>
+import HelloWorld from '@/components/HelloWorld.vue'
+
 export default {
-  // el: '#app',
+  name: "App",
+  // el: "#app",
+  components: {
+    HelloWorld,
+  },
   data: function(){
     return {
     inMove: false,
@@ -113,7 +121,8 @@ export default {
       this.activeSection = id;
       this.inMove = true;
       
-      document.getElementsByTagName('section')[id].scrollIntoView({behavior: 'smooth'});
+      let sections = document.getElementsByTagName('section');
+      sections[id].scrollIntoView({behavior: 'smooth'});
       
       setTimeout(() => {
         this.inMove = false;
@@ -194,8 +203,9 @@ h2 {
 }
 
 .fullpage {
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
+  overflow:auto; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -259,7 +269,7 @@ h1.black {
   top: 50%; */
   transform: translateY(-50%);
 }
-.right-div {
+.sections-menu .right-div {
   width: 50%;
   /* height: 20px; */
   float: right;
