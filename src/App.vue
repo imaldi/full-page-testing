@@ -102,48 +102,48 @@ export default {
         this.offsets.push(sectionOffset);
       }
     },
-    handleMouseWheel: function(e) {
+    // handleMouseWheel: function(e) {
       
-      if (e.wheelDelta < 30 && !this.inMove) {
-        this.moveUp();
-      } else if (e.wheelDelta > 30 && !this.inMove) {
-        this.moveDown();
-      }
+    //   if (e.wheelDelta < 30 && !this.inMove) {
+    //     this.moveUp();
+    //   } else if (e.wheelDelta > 30 && !this.inMove) {
+    //     this.moveDown();
+    //   }
         
-      e.preventDefault();
-      return false;
-    },
-    handleMouseWheelDOM: function(e) {
+    //   e.preventDefault();
+    //   return false;
+    // },
+    // handleMouseWheelDOM: function(e) {
       
-      if (e.detail > 0 && !this.inMove) {
-        this.moveUp();
-      } else if (e.detail < 0 && !this.inMove) {
-        this.moveDown();
-      }
+    //   if (e.detail > 0 && !this.inMove) {
+    //     this.moveUp();
+    //   } else if (e.detail < 0 && !this.inMove) {
+    //     this.moveDown();
+    //   }
       
-      return false;
-    },
-    moveDown() {
-      this.inMove = true;
-      this.activeSection--;
+    //   return false;
+    // },
+    // moveDown() {
+    //   this.inMove = true;
+    //   this.activeSection--;
         
-      // if(this.activeSection < 0) this.activeSection = this.offsets.length - 1;
-      if(this.activeSection < 0) this.activeSection = 0;
+    //   // if(this.activeSection < 0) this.activeSection = this.offsets.length - 1;
+    //   if(this.activeSection < 0) this.activeSection = 0;
         
-      this.scrollToSection(this.activeSection, true);
-      console.log('moveDown Terpanggil');
-    },
-    moveUp() {
-      this.inMove = true;
-      this.activeSection++;
+    //   this.scrollToSection(this.activeSection, true);
+    //   console.log('moveDown Terpanggil');
+    // },
+    // moveUp() {
+    //   this.inMove = true;
+    //   this.activeSection++;
         
-      // if(this.activeSection > this.offsets.length - 1) this.activeSection = 0;
-      if(this.activeSection > this.offsets.length - 1) this.activeSection = this.offsets.length-1;
+    //   // if(this.activeSection > this.offsets.length - 1) this.activeSection = 0;
+    //   if(this.activeSection > this.offsets.length - 1) this.activeSection = this.offsets.length-1;
         
-      this.scrollToSection(this.activeSection, true);
-      console.log('moveUp Terpanggil');
+    //   this.scrollToSection(this.activeSection, true);
+    //   console.log('moveUp Terpanggil');
 
-    },
+    // },
     scrollToSection(id, force = false) {
       if(this.inMove && !force) return false;
       
@@ -158,26 +158,26 @@ export default {
       }, 400);
       
     },
-    touchStart(e) {
-      e.preventDefault();
+    // touchStart(e) {
+    //   e.preventDefault();
       
-      this.touchStartY = e.touches[0].clientY;
-    },
-    touchMove(e) {
-      if(this.inMove) return false;
-      e.preventDefault();
+    //   this.touchStartY = e.touches[0].clientY;
+    // },
+    // touchMove(e) {
+    //   if(this.inMove) return false;
+    //   e.preventDefault();
       
-      const currentY = e.touches[0].clientY;
+    //   const currentY = e.touches[0].clientY;
       
-      if(this.touchStartY < currentY) {
-        this.moveDown();
-      } else {
-        this.moveUp();
-      }
+    //   if(this.touchStartY < currentY) {
+    //     this.moveDown();
+    //   } else {
+    //     this.moveUp();
+    //   }
       
-      this.touchStartY = 0;
-      return false;
-    }
+    //   this.touchStartY = 0;
+    //   return false;
+    // }
   },
   // beforeCreate(){
   //   this.calculateSectionOffsets();
@@ -192,11 +192,11 @@ export default {
     // this.calculateSectionOffsets();
     
     // window.addEventListener('scroll', this.onScroll, { passive: false })
-    window.addEventListener('DOMMouseScroll', this.handleMouseWheelDOM);  // Mozilla Firefox
-    window.addEventListener('mousewheel', this.handleMouseWheel, { passive: false }); // Other browsers
+    // window.addEventListener('DOMMouseScroll', this.handleMouseWheelDOM);  // Mozilla Firefox
+    // window.addEventListener('mousewheel', this.handleMouseWheel, { passive: false }); // Other browsers
     
-    window.addEventListener('touchstart', this.touchStart, { passive: false }); // mobile devices
-    window.addEventListener('touchmove', this.touchMove, { passive: false }); // mobile devices
+    // window.addEventListener('touchstart', this.touchStart, { passive: false }); // mobile devices
+    // window.addEventListener('touchmove', this.touchMove, { passive: false }); // mobile devices
   },
   // updated() {
   //   this.calculateSectionOffsets();
@@ -204,11 +204,11 @@ export default {
   // },
   destroyed() {
     // window.removeEventListener('scroll', this.onScroll);  // Other browsers
-    window.removeEventListener('mousewheel', this.handleMouseWheel, { passive: false });  // Other browsers
-    window.removeEventListener('DOMMouseScroll', this.handleMouseWheelDOM); // Mozilla Firefox
+    // window.removeEventListener('mousewheel', this.handleMouseWheel, { passive: false });  // Other browsers
+    // window.removeEventListener('DOMMouseScroll', this.handleMouseWheelDOM); // Mozilla Firefox
     
-    window.removeEventListener('touchstart', this.touchStart); // mobile devices
-    window.removeEventListener('touchmove', this.touchMove); // mobile devices
+    // window.removeEventListener('touchstart', this.touchStart); // mobile devices
+    // window.removeEventListener('touchmove', this.touchMove); // mobile devices
   }
 };
 </script>
@@ -239,7 +239,7 @@ body {
   margin: 0;
   color: #FFF;
   font-family: Helvetica, arial, sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 h2 {
