@@ -37,6 +37,7 @@
       </span> -->
       
     </div>
+    <!-- Nanti tambahkan @scroll="onScroll" untuk pakai event onScroll -->
     <section class="fullpage blue">
       <h1>Vue.js Fullpage Scroll</h1>
       <p>by <a href="https://webdeasy.de/?referer=cp-NVOEBL" target="_blank">WebDEasy</a></p>
@@ -82,6 +83,15 @@ export default {
   };
   },
   methods: {
+    // onScroll ({ target: { scrollTop, clientHeight, scrollHeight }}) {
+    //   if (scrollTop + clientHeight >= scrollHeight) {
+    //     this.moveDown();
+    //     console.log('moveDown onScroll Called');
+    //   } else {
+    //     this.moveUp();
+    //     console.log('moveDown onScroll Called');
+    //   }
+    // },
     calculateSectionOffsets() {
       let sections = document.getElementsByTagName('section');
       let length = sections.length;
@@ -121,6 +131,7 @@ export default {
       if(this.activeSection < 0) this.activeSection = 0;
         
       this.scrollToSection(this.activeSection, true);
+      console.log('moveDown Terpanggil');
     },
     moveUp() {
       this.inMove = true;
@@ -130,6 +141,8 @@ export default {
       if(this.activeSection > this.offsets.length - 1) this.activeSection = this.offsets.length-1;
         
       this.scrollToSection(this.activeSection, true);
+      console.log('moveUp Terpanggil');
+
     },
     scrollToSection(id, force = false) {
       if(this.inMove && !force) return false;
@@ -178,6 +191,7 @@ export default {
   created() {
     // this.calculateSectionOffsets();
     
+    // window.addEventListener('scroll', this.onScroll, { passive: false })
     window.addEventListener('DOMMouseScroll', this.handleMouseWheelDOM);  // Mozilla Firefox
     window.addEventListener('mousewheel', this.handleMouseWheel, { passive: false }); // Other browsers
     
@@ -189,6 +203,7 @@ export default {
   
   // },
   destroyed() {
+    // window.removeEventListener('scroll', this.onScroll);  // Other browsers
     window.removeEventListener('mousewheel', this.handleMouseWheel, { passive: false });  // Other browsers
     window.removeEventListener('DOMMouseScroll', this.handleMouseWheelDOM); // Mozilla Firefox
     
@@ -224,7 +239,7 @@ body {
   margin: 0;
   color: #FFF;
   font-family: Helvetica, arial, sans-serif;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 h2 {
