@@ -6,48 +6,40 @@
     </div>
     <router-view/> -->
     
-    <div class="sections-menu">
-      <div class="right-div">
-        <!-- <ul>
-          <li>tes</li>
-          <li>tes</li>
-          <li>tes</li>
-          <li>tes</li>
-          <li>tes</li>
-          </ul> -->
-        <!-- test ya anjing -->
-        <!-- <p>Test Babi</p> -->
-        <!-- <span><p>Test Babi</p></span>
-        <span><p>Test Babi</p></span> -->
-        <!-- <p>{{offsets.length}}</p> -->
-      <span
-         class="menu-point"
-         v-bind:class="{active: activeSection == index}"
-         v-on:click="scrollToSection(index)"
-         v-for="(offset, index) in offsets"
-         v-bind:key="index">{{menuString[index]}}
-      </span>
+    <!-- <head> -->
+      <div class="sections-menu">
+        <div class="right-div">
+        <span
+           class="menu-point"
+           v-bind:class="{active: activeSection == index}"
+           v-on:click="scrollToSection(index)"
+           v-for="(offset, index) in offsets"
+           v-bind:key="index">{{menuString[index]}}
+        </span>
+        </div>
       </div>
-      <!-- <span
-         class="menu-point"
-         v-bind:class="{active: activeSection == index}"
-         v-on:click="scrollToSection(index)"
-         v-for="(offset, index) in offsets"
-         v-bind:key="index">Text
-      </span> -->
-      
-    </div>
+    <!-- </head> -->
+    <div>
+
+    
     <!-- Nanti tambahkan @scroll="onScroll" untuk pakai event onScroll -->
-    <section class="fullpage blue">
-      <h1>Vue.js Fullpage Scroll</h1>
-      <p>by <a href="https://webdeasy.de/?referer=cp-NVOEBL" target="_blank">WebDEasy</a></p>
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
-      <HelloWorld msg="Welcome to Your Vue.js App"/>
-    </section>
+    <div class="fullpage turunsikit turunY">
+      <section>
+        <h1>Vue.js Fullpage Scroll</h1>
+        <p>by <a href="https://webdeasy.de/?referer=cp-NVOEBL" target="_blank">WebDEasy</a></p>
+        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <HelloWorld msg="Welcome to Your Vue.js App"/>
+      </section>
+      <div class="halfpage background blue">
+
+      </div>
+    </div>
+    
     <section class="fullpage black">
       <h1>Section 2</h1>
       <p>made with <a href="https://vuejs.org/" target="_blank">Vue.js</a></p>
     </section>
+    
     <section class="fullpage red">
       <h1>Section 3</h1>
       <p>works on <b>desktop & mobile</b></p>
@@ -56,6 +48,7 @@
       <h1>Section 4</h1>
       <p>Tutorial <a href="https://webdeasy.de/en/programming-vue-js-fullpage-scroll/?referer=cp-NVOEBL" target="_blank">here</a></p>
     </section>
+  </div>
   </div>
 </template>
 
@@ -246,6 +239,14 @@ h2 {
   position: fixed;
 }
 
+.background{
+    color: #a86895;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -100;
+}
+
 .sections-menu {
   /* align-items: center; */
 
@@ -257,6 +258,7 @@ h2 {
   /* overflow: auto; */
 
   background-color: #FFF;
+  /* transform: translateY(10%); */
 
   /* right: 1rem;
   top: 50%; */
@@ -295,7 +297,18 @@ h2 {
 }
 
 .fullpage {
-  min-height: 200vh;
+  min-height: 200%;
+  /* height:100%; */
+  width: 100%;
+  overflow:auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.halfpage {
+  min-height: 100%;
   /* height:100%; */
   width: 100%;
   overflow:auto; 
@@ -333,8 +346,21 @@ section.black {
   background-color: #000;
 }
 
+.fullpage .turunsikit {
+  transform:  translateZ(-100px);
+}
+
+.fullpage .turunY{
+  transform: translateY(10%);
+}
+
 .blue {
   background-color: #237ad4;
+  border-radius: 0px 0px 50px 0px;
+  /* border: 2px solid #73AD21; */
+  /* padding: 20px;
+  width: 200px;
+  height: 150px;  */
 }
 
 .green {
