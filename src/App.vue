@@ -117,7 +117,8 @@ export default {
       this.inMove = true;
       this.activeSection--;
         
-      if(this.activeSection < 0) this.activeSection = this.offsets.length - 1;
+      // if(this.activeSection < 0) this.activeSection = this.offsets.length - 1;
+      if(this.activeSection < 0) this.activeSection = 0;
         
       this.scrollToSection(this.activeSection, true);
     },
@@ -125,7 +126,8 @@ export default {
       this.inMove = true;
       this.activeSection++;
         
-      if(this.activeSection > this.offsets.length - 1) this.activeSection = 0;
+      // if(this.activeSection > this.offsets.length - 1) this.activeSection = 0;
+      if(this.activeSection > this.offsets.length - 1) this.activeSection = this.offsets.length-1;
         
       this.scrollToSection(this.activeSection, true);
     },
@@ -222,7 +224,7 @@ body {
   margin: 0;
   color: #FFF;
   font-family: Helvetica, arial, sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 h2 {
