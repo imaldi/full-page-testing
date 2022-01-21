@@ -8,6 +8,18 @@
     
     <div class="sections-menu">
       <div class="right-div">
+        <!-- <ul>
+          <li>tes</li>
+          <li>tes</li>
+          <li>tes</li>
+          <li>tes</li>
+          <li>tes</li>
+          </ul> -->
+        <!-- test ya anjing -->
+        <!-- <p>Test Babi</p> -->
+        <!-- <span><p>Test Babi</p></span>
+        <span><p>Test Babi</p></span> -->
+        <!-- <p>{{offsets.length}}</p> -->
         <span
          class="menu-point"
          v-bind:class="{active: activeSection == index}"
@@ -72,6 +84,7 @@ export default {
     calculateSectionOffsets() {
       let sections = document.getElementsByTagName('section');
       let length = sections.length;
+      console.log("ini terpanggil kok " + sections.length);
       
       for(let i = 0; i < length; i++) {
         let sectionOffset = sections[i].offsetTop;
@@ -150,8 +163,17 @@ export default {
       return false;
     }
   },
-  created() {
+  // beforeCreate(){
+  //   this.calculateSectionOffsets();
+
+  // },
+  
+  mounted() {
     this.calculateSectionOffsets();
+    
+  },
+  created() {
+    // this.calculateSectionOffsets();
     
     window.addEventListener('DOMMouseScroll', this.handleMouseWheelDOM);  // Mozilla Firefox
     window.addEventListener('mousewheel', this.handleMouseWheel, { passive: false }); // Other browsers
@@ -159,6 +181,10 @@ export default {
     window.addEventListener('touchstart', this.touchStart, { passive: false }); // mobile devices
     window.addEventListener('touchmove', this.touchMove, { passive: false }); // mobile devices
   },
+  // updated() {
+  //   this.calculateSectionOffsets();
+  
+  // },
   destroyed() {
     window.removeEventListener('mousewheel', this.handleMouseWheel, { passive: false });  // Other browsers
     window.removeEventListener('DOMMouseScroll', this.handleMouseWheelDOM); // Mozilla Firefox
@@ -200,6 +226,48 @@ body {
 
 h2 {
   position: fixed;
+}
+
+.sections-menu {
+  /* align-items: center; */
+
+  position: fixed;
+  /* left: 50%; */
+  /* top: 1rem; */
+  width: 100%;
+  height: 10%;
+  /* overflow: auto; */
+
+  background-color: #FFF;
+
+  /* right: 1rem;
+  top: 50%; */
+  /* transform: translateY(-50%); */
+}
+.sections-menu .right-div {
+  width: 50%;
+  height: 100%;
+  float: right;
+  /* transform: translateY(20%); */
+  /* text-decoration-color: #000; */
+  /* background-color: #111; */
+}
+.sections-menu .right-div .menu-point {
+  
+  width: 10px;
+  height: 100%;
+  /* background-color: #FFF; */
+  top: 50%;
+  display: inline-block;
+  margin: 4rem 4rem 1rem 4rem;
+  opacity: .6;
+  transition: .4s ease all;
+  cursor: pointer;
+}
+
+.sections-menu .right-div .menu-point .active {
+  opacity: 1;
+  transform: scale(1.5);
 }
 
 .fullpage {
@@ -254,43 +322,7 @@ h1.black {
 
 
 
-.sections-menu {
-  /* align-items: center; */
 
-  position: fixed;
-  /* left: 50%; */
-  top: 1rem;
-  width: 100%;
-  /* height: 20px; */
-
-  background-color: #FFF;
-
-  /* right: 1rem;
-  top: 50%; */
-  transform: translateY(-50%);
-}
-.sections-menu .right-div {
-  width: 50%;
-  /* height: 20px; */
-  float: right;
-  background-color: #FFF;
-}
-.sections-menu .right-div .menu-point {
-  
-  width: 10px;
-  /* height: 20px; */
-  /* background-color: #FFF; */
-  display: inline-block;
-  margin: 2rem 4rem 1rem 4rem;
-  opacity: .6;
-  transition: .4s ease all;
-  cursor: pointer;
-}
-
-.sections-menu .menu-point.active {
-  opacity: 1;
-  transform: scale(1.5);
-}
 
 @media screen and (max-width: 1200px) {
   h1 {
