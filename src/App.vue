@@ -20,7 +20,7 @@
         <!-- <span><p>Test Babi</p></span>
         <span><p>Test Babi</p></span> -->
         <!-- <p>{{offsets.length}}</p> -->
-        <span
+      <span
          class="menu-point"
          v-bind:class="{active: activeSection == index}"
          v-on:click="scrollToSection(index)"
@@ -40,6 +40,7 @@
     <section class="fullpage blue">
       <h1>Vue.js Fullpage Scroll</h1>
       <p>by <a href="https://webdeasy.de/?referer=cp-NVOEBL" target="_blank">WebDEasy</a></p>
+      <HelloWorld msg="Welcome to Your Vue.js App"/>
       <HelloWorld msg="Welcome to Your Vue.js App"/>
     </section>
     <section class="fullpage black">
@@ -255,23 +256,30 @@ h2 {
 .sections-menu .right-div .menu-point {
   
   width: 10px;
-  height: 100%;
+  height: 10%;
   /* background-color: #FFF; */
-  top: 50%;
+  /* top: 50%; */
   display: inline-block;
-  margin: 4rem 4rem 1rem 4rem;
+  margin: 2rem 4rem 2rem 4rem;
   opacity: .6;
   transition: .4s ease all;
   cursor: pointer;
 }
 
-.sections-menu .right-div .menu-point .active {
+.sections-menu .right-div .active {
+  height: 100%;
+
+  /* background-color: #000; */
+  margin: 2rem 2rem 2rem 2rem;
   opacity: 1;
-  transform: scale(1.5);
+  /* margin: 2rem; */
+  transform: scale(1.5) translateX(-100%);
+  transform-origin: center;
 }
 
 .fullpage {
-  /* height: 100vh; */
+  min-height: 200vh;
+  /* height:100%; */
   width: 100%;
   overflow:auto; 
   display: flex;
