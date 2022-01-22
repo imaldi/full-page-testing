@@ -5,53 +5,152 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/> -->
-    
+
     <!-- <head> -->
-      <div class="sections-menu">
-        <div class="right-div">
-        <span
-           class="menu-point"
-           v-bind:class="{active: activeSection == index}"
-           v-on:click="scrollToSection(index)"
-           v-for="(offset, index) in offsets"
-           v-bind:key="index">{{menuString[index]}}
-        </span>
-        </div>
+    <div class="sections-menu">
+      <div class="right-div">
+        <span class="menu-point" v-bind:class="{ active: activeSection == index }" v-on:click="scrollToSection(index)" v-for="(offset, index) in offsets" v-bind:key="index">{{ menuString[index] }} </span>
       </div>
+    </div>
     <!-- </head> -->
     <div>
-
-    
-    <!-- Nanti tambahkan @scroll="onScroll" untuk pakai event onScroll -->
-    <div class="fullpage turunsikit">
-      <section class="turunY">
-        <h1>Vue.js Fullpage Scroll</h1>
+      <!-- Nanti tambahkan @scroll="onScroll" untuk pakai event onScroll -->
+      <div class="fullpage turunsikit">
+        <section class="turunY">
+          <!-- <h1>Vue.js Fullpage Scroll</h1>
         <p>by <a href="https://webdeasy.de/?referer=cp-NVOEBL" target="_blank">WebDEasy</a></p>
         <ul class="no-dot-list">
           <li>
             <img src="http://riadentalcare.com/asset-user/images/dental2.png" alt="Image" class="size-quarter">
           </li>
-        </ul>
-      </section>
-      <div class="halfpage background blue">
+        </ul> -->
+          <!-- ini copas SC bang dandi -->
+          <div class="container">
+            <div class="row align-items-left">
+              <div class="col-lg-6 float-left">
+                <span class="d-block subheading above-title">Praktek Dokter Gigi Batam</span>
+                <h1 class="title-blue">Ria Dental Care</h1>
+                <p class="mb-4">Saat ini Ria Dental Care Terdiri dari 3 Cabang yaitu Ria Dental Care Botania, Ria Dental Care Batu Aji, dan Ria Dental Care Nagoya</p>
+                <div class="container mt-5">
+                  <div>
+                    <b-button pill variant="info" v-b-modal.modal-1> <div class="white-text">Klik Disini Untuk Reservasi !</div></b-button>
 
+                    <b-modal id="modal-1" title="Informasi Reservasi" size="lg" hide-header-close header-class="above-title">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-body">
+                            <!-- <button type="button" class="btn-close" data-dismiss="modal">&times;</button> -->
+
+                            <p class="text-center">Hubungi Admin untuk melakukan reservasi</p>
+                            <div class="row">
+                              <div class="col-lg-6">
+                                <div class="card">
+                                  <img src="http://riadentalcare.com/asset-user/images/reservasi1.jpg" width="100%" height="250px" />
+
+                                  <div class="card-body">
+                                    <b-button pill variant="info" v-b-modal.modal-2> <div class="white-text">Reservasi Mandiri</div></b-button>
+                                    <b-modal id="modal-2" title="Reservasi Mandiri" size="lg" hide-header-close header-class="above-title">
+                                      <div class="modal-content">
+                                        <div class="modal-body">
+                                          <!-- <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#myModal">&times;</button> -->
+                                          <!-- <h2 class="text-center text-primary"><b></b></h2> -->
+                                          <p class="text-center">Lakukan Reservasi Mandiri Untuk Mempermudah Anda Dalam Mendapatkan Nomor Antrian</p>
+                                          <form action="http://riadentalcare.com/antrian" method="post">
+                                            <input type="hidden" name="_token" value="U4a6KQdeRUAcCV3jN8YVVDtOUJZEr5VT1Oczl2TJ" />
+                                            <div id="validation-errors"></div>
+                                            <div class="form-group">
+                                              <label for="id_admin">Cabang</label>
+                                              <select name="id_admin" id="id_admin" class="form-control" required>
+                                                <option value="ID0001">RDC Botania</option>
+                                                <option value="ID0002">RDC Batu Aji</option>
+                                                <option value="ID0003">RDC Nagoya</option>
+                                              </select>
+                                            </div>
+                                            <div class="row">
+                                              <div class="col-md-6">
+                                                <div class="form-group tgl">
+                                                  <label for="tgl">Tanggal Booking Antrian<sup>*</sup></label>
+                                                  <input type="date" class="form-control" name="tgl" id="tgl" value="2022-01-21" required />
+                                                  <span id="alert-tgl" class="" role="alert"></span>
+                                                </div>
+                                              </div>
+                                              <div class="col-md-6">
+                                                <div class="form-group jam">
+                                                  <label for="jam">Jam Booking Antrian<sup>*</sup></label>
+                                                  <input type="time" class="form-control is-valid" name="jam" id="jam" min="12:00" max="23:59" value="12:00" required />
+                                                  <span id="alert-jam" class="" role="alert"></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="form-group pasien">
+                                              <label for="pasien">Pasien<sup>*</sup></label>
+                                              <input type="text" class="form-control" name="pasien" id="pasien" placeholder="Masukkan ID Pasien atau NIK atau No. HP terdaftar..." required />
+                                              <span id="alert-pasien" class="" role="alert"></span>
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="keluhan">Keluhan<sup>*</sup></label>
+                                              <textarea name="keluhan" id="keluhan" rows="5" class="form-control" required placeholder="Masukkan Keluhan..."></textarea>
+                                            </div>
+                                            <div class="card">
+                                              <div class="card-body">
+                                                <button type="submit" class="btn btn-primary col-12" id="submit">Dapatkan Antrian</button>
+                                              </div>
+                                            </div>
+                                          </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <p>Belum terdaftar? Daftarkan diri secara manual <a href="#" data-toggle="modal" data-target="#myModal4">di sini</a>.</p>
+                                        </div>
+                                      </div>
+                                    </b-modal>
+                                    <!-- <a href="#" data-toggle="modal" data-target="#myModal3" class="btn btn-primary btn-block">Reservasi Mandiri</a> -->
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="card">
+                                  <img src="http://riadentalcare.com/asset-user/images/reservasi2.jpg" width="100%" height="250px" />
+                                  <div class="card-body">
+                                    <!-- <a href="#" data-toggle="modal" data-target="#myModal2" data-dismiss="modal" class="btn btn-primary btn-block">Reservasi Via Admin Receptionist</a> -->
+                                    <b-button pill variant="info" v-b-modal.modal-1> <div class="white-text">Reservasi Mandiri</div></b-button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </b-modal>
+                  </div>
+                </div>
+                <br /><br /><br />
+              </div>
+              <div class="col-lg-6">
+                <figure class="illustration">
+                  <img src="http://riadentalcare.com/asset-user/images/dental2.png" alt="Image" class="img-fluid" />
+                </figure>
+              </div>
+              <div class="col-lg-6"></div>
+            </div>
+          </div>
+        </section>
+        <div class="halfpage background blue"></div>
       </div>
+
+      <section class="fullpage black">
+        <h1>Section 2</h1>
+        <p>made with <a href="https://vuejs.org/" target="_blank">Vue.js</a></p>
+      </section>
+
+      <section class="fullpage red">
+        <h1>Section 3</h1>
+        <p>works on <b>desktop & mobile</b></p>
+      </section>
+      <section class="fullpage green">
+        <h1>Section 4</h1>
+        <p>Tutorial <a href="https://webdeasy.de/en/programming-vue-js-fullpage-scroll/?referer=cp-NVOEBL" target="_blank">here</a></p>
+      </section>
     </div>
-    
-    <section class="fullpage black">
-      <h1>Section 2</h1>
-      <p>made with <a href="https://vuejs.org/" target="_blank">Vue.js</a></p>
-    </section>
-    
-    <section class="fullpage red">
-      <h1>Section 3</h1>
-      <p>works on <b>desktop & mobile</b></p>
-    </section>
-    <section class="fullpage green">
-      <h1>Section 4</h1>
-      <p>Tutorial <a href="https://webdeasy.de/en/programming-vue-js-fullpage-scroll/?referer=cp-NVOEBL" target="_blank">here</a></p>
-    </section>
-  </div>
   </div>
 </template>
 
@@ -64,19 +163,14 @@ export default {
   // components: {
   //   HelloWorld,
   // },
-  data: function(){
+  data: function () {
     return {
-    inMove: false,
-    activeSection: 0,
-    offsets: [],
-    menuString: [
-      "Home",
-      "About",
-      "Portofolio",
-      "Contact"
-    ],
-    touchStartY: 0
-  };
+      inMove: false,
+      activeSection: 0,
+      offsets: [],
+      menuString: ["Home", "About", "Portofolio", "Contact"],
+      touchStartY: 0,
+    };
   },
   methods: {
     // onScroll ({ target: { scrollTop, clientHeight, scrollHeight }}) {
@@ -89,88 +183,87 @@ export default {
     //   }
     // },
     calculateSectionOffsets() {
-      let sections = document.getElementsByTagName('section');
+      let sections = document.getElementsByTagName("section");
       let length = sections.length;
       console.log("ini terpanggil kok " + sections.length);
-      
-      for(let i = 0; i < length; i++) {
+
+      for (let i = 0; i < length; i++) {
         let sectionOffset = sections[i].offsetTop;
         this.offsets.push(sectionOffset);
       }
     },
     // handleMouseWheel: function(e) {
-      
+
     //   if (e.wheelDelta < 30 && !this.inMove) {
     //     this.moveUp();
     //   } else if (e.wheelDelta > 30 && !this.inMove) {
     //     this.moveDown();
     //   }
-        
+
     //   e.preventDefault();
     //   return false;
     // },
     // handleMouseWheelDOM: function(e) {
-      
+
     //   if (e.detail > 0 && !this.inMove) {
     //     this.moveUp();
     //   } else if (e.detail < 0 && !this.inMove) {
     //     this.moveDown();
     //   }
-      
+
     //   return false;
     // },
     // moveDown() {
     //   this.inMove = true;
     //   this.activeSection--;
-        
+
     //   // if(this.activeSection < 0) this.activeSection = this.offsets.length - 1;
     //   if(this.activeSection < 0) this.activeSection = 0;
-        
+
     //   this.scrollToSection(this.activeSection, true);
     //   console.log('moveDown Terpanggil');
     // },
     // moveUp() {
     //   this.inMove = true;
     //   this.activeSection++;
-        
+
     //   // if(this.activeSection > this.offsets.length - 1) this.activeSection = 0;
     //   if(this.activeSection > this.offsets.length - 1) this.activeSection = this.offsets.length-1;
-        
+
     //   this.scrollToSection(this.activeSection, true);
     //   console.log('moveUp Terpanggil');
 
     // },
     scrollToSection(id, force = false) {
-      if(this.inMove && !force) return false;
-      
+      if (this.inMove && !force) return false;
+
       this.activeSection = id;
       this.inMove = true;
-      
-      let sections = document.getElementsByTagName('section');
-      sections[id].scrollIntoView({behavior: 'smooth'});
-      
+
+      let sections = document.getElementsByTagName("section");
+      sections[id].scrollIntoView({ behavior: "smooth" });
+
       setTimeout(() => {
         this.inMove = false;
       }, 400);
-      
     },
     // touchStart(e) {
     //   e.preventDefault();
-      
+
     //   this.touchStartY = e.touches[0].clientY;
     // },
     // touchMove(e) {
     //   if(this.inMove) return false;
     //   e.preventDefault();
-      
+
     //   const currentY = e.touches[0].clientY;
-      
+
     //   if(this.touchStartY < currentY) {
     //     this.moveDown();
     //   } else {
     //     this.moveUp();
     //   }
-      
+
     //   this.touchStartY = 0;
     //   return false;
     // }
@@ -179,33 +272,29 @@ export default {
   //   this.calculateSectionOffsets();
 
   // },
-  
+
   mounted() {
     this.calculateSectionOffsets();
-    
   },
   created() {
     // this.calculateSectionOffsets();
-    
     // window.addEventListener('scroll', this.onScroll, { passive: false })
     // window.addEventListener('DOMMouseScroll', this.handleMouseWheelDOM);  // Mozilla Firefox
     // window.addEventListener('mousewheel', this.handleMouseWheel, { passive: false }); // Other browsers
-    
     // window.addEventListener('touchstart', this.touchStart, { passive: false }); // mobile devices
     // window.addEventListener('touchmove', this.touchMove, { passive: false }); // mobile devices
   },
   // updated() {
   //   this.calculateSectionOffsets();
-  
+
   // },
   destroyed() {
     // window.removeEventListener('scroll', this.onScroll);  // Other browsers
     // window.removeEventListener('mousewheel', this.handleMouseWheel, { passive: false });  // Other browsers
     // window.removeEventListener('DOMMouseScroll', this.handleMouseWheelDOM); // Mozilla Firefox
-    
     // window.removeEventListener('touchstart', this.touchStart); // mobile devices
     // window.removeEventListener('touchmove', this.touchMove); // mobile devices
-  }
+  },
 };
 </script>
 
@@ -233,25 +322,40 @@ export default {
 
 body {
   margin: 0;
-  color: #FFF;
+  color: #fff;
   font-family: Helvetica, arial, sans-serif;
   /* overflow: hidden; */
+}
+
+.title-blue {
+  color: #42bfd0;
+  font-weight: bold;
+  size: 40px;
+}
+
+.above-title {
+  color: #42bfd0;
+  font-weight: bold;
+}
+
+.white-text {
+  color: #fff;
 }
 
 h2 {
   position: fixed;
 }
 
-.size-quarter{
+.size-quarter {
   width: 40%;
 }
 
-.background{
-    color: #a86895;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -100;
+.background {
+  color: #a86895;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
 }
 
 .sections-menu {
@@ -264,7 +368,7 @@ h2 {
   height: 10%;
   /* overflow: auto; */
 
-  background-color: #FFF;
+  background-color: #fff;
   /* transform: translateY(10%); */
 
   /* right: 1rem;
@@ -280,15 +384,14 @@ h2 {
   /* background-color: #111; */
 }
 .sections-menu .right-div .menu-point {
-  
   width: 10px;
   height: 10%;
   /* background-color: #FFF; */
   /* top: 50%; */
   display: inline-block;
   margin: 2rem 4rem 2rem 4rem;
-  opacity: .6;
-  transition: .4s ease all;
+  opacity: 0.6;
+  transition: 0.4s ease all;
   cursor: pointer;
 }
 
@@ -307,7 +410,7 @@ h2 {
   min-height: 200%;
   /* height:100%; */
   width: 100%;
-  overflow:auto; 
+  overflow: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,7 +421,7 @@ h2 {
   min-height: 100%;
   /* height:100%; */
   width: 100%;
-  overflow:auto; 
+  overflow: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,7 +444,7 @@ p {
   font-weight: 600;
   background: rgba(255, 255, 255, 0.3);
   padding: 5px 10px;
-  color: #FFF;
+  color: #fff;
   margin-left: 5px;
 }
 
@@ -354,12 +457,12 @@ section.black {
 }
 
 .fullpage .turunsikit {
-  transform:  translateZ(-100px);
+  transform: translateZ(-150px);
 }
 
-.fullpage .turunY{
+.fullpage .turunY {
   /* transform: translateY(10%); */
-  padding-top: 5%;
+  padding-top: 10%;
   margin-bottom: 15%;
 }
 
@@ -379,12 +482,9 @@ section.black {
 h1.black {
   color: #000;
 }
-.no-dot-list { 
+.no-dot-list {
   list-style-type: none;
 }
-
-
-
 
 @media screen and (max-width: 1200px) {
   h1 {
