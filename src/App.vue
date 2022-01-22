@@ -23,12 +23,11 @@
 
     
     <!-- Nanti tambahkan @scroll="onScroll" untuk pakai event onScroll -->
-    <div class="fullpage turunsikit turunY">
-      <section>
+    <div class="fullpage turunsikit">
+      <section class="turunY">
         <h1>Vue.js Fullpage Scroll</h1>
         <p>by <a href="https://webdeasy.de/?referer=cp-NVOEBL" target="_blank">WebDEasy</a></p>
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
+        <img src="http://riadentalcare.com/asset-user/images/dental2.png" alt="Image" class="size-quarter">
       </section>
       <div class="halfpage background blue">
 
@@ -53,14 +52,14 @@
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+// import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: "App",
   // el: "#app",
-  components: {
-    HelloWorld,
-  },
+  // components: {
+  //   HelloWorld,
+  // },
   data: function(){
     return {
     inMove: false,
@@ -239,6 +238,10 @@ h2 {
   position: fixed;
 }
 
+.size-quarter{
+  width: 40%;
+}
+
 .background{
     color: #a86895;
     position: absolute;
@@ -351,12 +354,14 @@ section.black {
 }
 
 .fullpage .turunY{
-  transform: translateY(10%);
+  /* transform: translateY(10%); */
+  padding-top: 5%;
+  margin-bottom: 15%;
 }
 
 .blue {
-  background-color: #237ad4;
-  border-radius: 0px 0px 50px 0px;
+  background-color: #ffdcf4;
+  border-radius: 0px 0px 500px 0px;
   /* border: 2px solid #73AD21; */
   /* padding: 20px;
   width: 200px;
