@@ -25,7 +25,8 @@
           </li>
         </ul> -->
           <!-- ini copas SC bang dandi -->
-          <div class="container">
+          <!-- Ini setengah pertama beranda -->
+          <div class="container margin-bottom-large">
             <div class="row align-items-left">
               <div class="col-lg-6 float-left">
                 <span class="d-block subheading above-title">Praktek Dokter Gigi Batam</span>
@@ -178,6 +179,38 @@
                 </figure>
               </div>
               <div class="col-lg-6"></div>
+            </div>
+          </div>
+          <!-- Ini setengah terakhir beranda -->
+          <!-- <a href="https://api.whatsapp.com/send?phone=6282360190016&text=Hallo Admin Ria Dental Care Batu Aji, Saya ingin melakukan reservasi, Mohon Dibantu">Hubungin Admin RDC Botania</a> -->
+
+          <div class="container">
+            <div>
+              <p class="above-title text-size-large">Cabang Ria Dental Care</p>
+              <p>Saat ini Ria Dental Care Terdiri Dari 3 Cabang Sebagai Berikut</p>
+              <div class="row d-flex justify-content-center turun-sikit-card" style="width: 100%">
+                <div class="card margin-horizontal border-0" style="width: 20rem">
+                  <img src="http://riadentalcare.com/asset-user/images/cabang/rdc1.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title above-title">RDC Botania</h5>
+                    <b-button pill variant="info"> <div class="white-text">Hubungin Admin RDC Botania</div></b-button>
+                  </div>
+                </div>
+                <div class="card margin-horizontal border-0 turun-sikit-card" style="width: 20rem">
+                  <img src="http://riadentalcare.com/asset-user/images/cabang/rdc2.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title above-title">RDC Batu Aji</h5>
+                    <b-button pill variant="info"> <div class="white-text">Hubungin Admin RDC Botania</div></b-button>
+                  </div>
+                </div>
+                <div class="card margin-horizontal border-0 turun-sikit-card" style="width: 20rem">
+                  <img src="http://riadentalcare.com/asset-user/images/cabang/rdc3.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title above-title">RDC Nagoya</h5>
+                    <b-button pill variant="info"> <div class="white-text">Hubungin Admin RDC Botania</div></b-button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -374,6 +407,11 @@ body {
   /* overflow: hidden; */
 }
 
+.margin-horizontal {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 .title-blue {
   color: #42bfd0;
   font-weight: bold;
@@ -383,6 +421,10 @@ body {
 .above-title {
   color: #42bfd0;
   font-weight: bold;
+}
+
+.text-size-large {
+  font-size: 30px;
 }
 
 .white-text {
@@ -453,6 +495,10 @@ h2 {
   transform-origin: center;
 }
 
+.custom-button-info {
+  background-color: #42bfd0;
+}
+
 .fullpage {
   min-height: 200%;
   /* height:100%; */
@@ -507,6 +553,11 @@ section.black {
   transform: translateZ(-150px);
 }
 
+.turun-sikit-card {
+  position: relative;
+  z-index: -1;
+}
+
 .fullpage .turunY {
   /* transform: translateY(10%); */
   padding-top: 10%;
@@ -532,7 +583,9 @@ h1.black {
 .no-dot-list {
   list-style-type: none;
 }
-
+.margin-bottom-large {
+  margin-bottom: 15%;
+}
 @media screen and (max-width: 1200px) {
   h1 {
     font-size: 2.5em;
