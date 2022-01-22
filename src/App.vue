@@ -102,6 +102,10 @@
                                           <p>Belum terdaftar? Daftarkan diri secara manual <a href="#" data-toggle="modal" data-target="#myModal4">di sini</a>.</p>
                                         </div>
                                       </div>
+                                      <template #modal-footer> <p></p> </template>
+                                      <template #modal-header-close>
+                                        <button type="button" class="btn-close" data-dismiss="modal">&times;</button>
+                                      </template>
                                     </b-modal>
                                     <!-- <a href="#" data-toggle="modal" data-target="#myModal3" class="btn btn-primary btn-block">Reservasi Mandiri</a> -->
                                   </div>
@@ -112,7 +116,49 @@
                                   <img src="http://riadentalcare.com/asset-user/images/reservasi2.jpg" width="100%" height="250px" />
                                   <div class="card-body">
                                     <!-- <a href="#" data-toggle="modal" data-target="#myModal2" data-dismiss="modal" class="btn btn-primary btn-block">Reservasi Via Admin Receptionist</a> -->
-                                    <b-button pill variant="info" v-b-modal.modal-1> <div class="white-text">Reservasi Mandiri</div></b-button>
+                                    <b-button pill variant="info" v-b-modal.modal-3> <div class="white-text">Reservasi Via Admin Receptionist</div></b-button>
+                                    <b-modal id="modal-3" title="Pilihan Cabang Reservasi" size="lg" hide-header-close header-class="above-title">
+                                      <!-- <button type="button" class="close" data-dismiss="modal" data-toggle="modal" data-target="#myModal">&times;</button> -->
+
+                                      <p class="text-center">Silahkan Pilih Cabang Ria Dental Care Yang Ingin Dihubungi</p>
+                                      <div class="row">
+                                        <div class="col-md-4">
+                                          <div class="card">
+                                            <img src="http://riadentalcare.com/asset-user/images/modal/rdc1.jpg" width="100%" height="150px" />
+                                            <div class="card-body">
+                                              <a
+                                                href="https://api.whatsapp.com/send?phone=6285363127424&text=Hallo Admin Ria Dental Care Botania, Saya ingin melakukan reservasi, Mohon Dibantu"
+                                                target="_blank"
+                                                class="btn btn-primary btn-block"
+                                                >RDC Botania</a
+                                              >
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="card">
+                                            <img src="http://riadentalcare.com/asset-user/images/modal/rdc2.jpg" width="100%" height="150px" />
+                                            <div class="card-body">
+                                              <a
+                                                href="https://api.whatsapp.com/send?phone=6282360190016&text=Hallo Admin Ria Dental Care Batu Aji, Saya ingin melakukan reservasi, Mohon Dibantu"
+                                                target="_blank"
+                                                class="btn btn-primary btn-block"
+                                                >RDC Aji</a
+                                              >
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="card">
+                                            <img src="http://riadentalcare.com/asset-user/images/modal/rdc3.jpg" width="100%" height="150px" />
+                                            <div class="card-body">
+                                              <a href="" target="_blank" class="btn btn-primary btn-block">RDC Nagoya</a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <template #modal-footer> <p></p> </template>
+                                    </b-modal>
                                   </div>
                                 </div>
                               </div>
@@ -120,6 +166,7 @@
                           </div>
                         </div>
                       </div>
+                      <template #modal-footer> <p></p> </template>
                     </b-modal>
                   </div>
                 </div>
