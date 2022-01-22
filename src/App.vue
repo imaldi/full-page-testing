@@ -27,7 +27,11 @@
       <section class="turunY">
         <h1>Vue.js Fullpage Scroll</h1>
         <p>by <a href="https://webdeasy.de/?referer=cp-NVOEBL" target="_blank">WebDEasy</a></p>
-        <img src="http://riadentalcare.com/asset-user/images/dental2.png" alt="Image" class="size-quarter">
+        <ul class="no-dot-list">
+          <li>
+            <img src="http://riadentalcare.com/asset-user/images/dental2.png" alt="Image" class="size-quarter">
+          </li>
+        </ul>
       </section>
       <div class="halfpage background blue">
 
@@ -375,7 +379,9 @@ section.black {
 h1.black {
   color: #000;
 }
-
+.no-dot-list { 
+  list-style-type: none;
+}
 
 
 
