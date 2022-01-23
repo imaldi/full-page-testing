@@ -29,8 +29,8 @@
           <div class="container margin-bottom-large">
             <div class="row align-items-left">
               <div class="col-lg-6 float-left">
-                <span class="d-block subheading above-title">Praktek Dokter Gigi Batam</span>
-                <h1 class="title-blue">Ria Dental Care</h1>
+                <span class="subheading above-title">Praktek Dokter Gigi Batam</span>
+                <div class="title-blue text-size-large" style="text-align: left">Ria Dental Care</div>
                 <p class="mb-4">Saat ini Ria Dental Care Terdiri dari 3 Cabang yaitu Ria Dental Care Botania, Ria Dental Care Batu Aji, dan Ria Dental Care Nagoya</p>
                 <div class="container mt-5">
                   <div>
@@ -186,8 +186,8 @@
 
           <div class="container">
             <div>
-              <p class="above-title text-size-large">Cabang Ria Dental Care</p>
-              <p>Saat ini Ria Dental Care Terdiri Dari 3 Cabang Sebagai Berikut</p>
+              <p class="above-title text-size-large" style="text-align: center">Cabang Ria Dental Care</p>
+              <p class="text-subtitle" style="text-align: center">Saat ini Ria Dental Care Terdiri Dari 3 Cabang Sebagai Berikut</p>
               <div class="row d-flex justify-content-center turun-sikit-card" style="width: 100%">
                 <div class="card margin-horizontal border-0" style="width: 20rem">
                   <img src="http://riadentalcare.com/asset-user/images/cabang/rdc1.jpg" class="card-img-top" alt="..." />
@@ -254,13 +254,13 @@
               <div class="m-5">
                 <b-row>
                   <b-col>
-                    <b-card img-src="https://drive.google.com/uc?export=view&id=1EyXunKbsAY8SWvFv58OcrE1tYlK6dn3_" img-alt="Image" img-top tag="article" style="max-width: 20rem" class="mb-2" border-0>
+                    <b-card img-src="https://drive.google.com/uc?export=view&id=1EyXunKbsAY8SWvFv58OcrE1tYlK6dn3_" img-alt="Image" img-top tag="article" style="max-width: 20rem; transform: translateZ(-100px)" class="mb-2 border-0">
                       <b-card-text class="above-title">Memiliki 3 Cabang</b-card-text>
                       <b-card-text class="text-subtitle">Saat ini Ria Dental Care Memiliki 3 Cabang yaitu : Ria Dental Care Cabang Botania, Ria Dental Care Cabang Batu Aji, dan Ria Dental Care Cabang Batu Nagoya</b-card-text>
                     </b-card>
                   </b-col>
                   <b-col>
-                    <b-card img-src="https://drive.google.com/uc?export=view&id=1PHChaOV4p62Hjs_d_w9QMOLy2w9L-t0H" img-alt="Image" img-top tag="article" style="max-width: 20rem" class="mb-2" border-0>
+                    <b-card img-src="https://drive.google.com/uc?export=view&id=1PHChaOV4p62Hjs_d_w9QMOLy2w9L-t0H" img-alt="Image" img-top tag="article" style="max-width: 20rem" class="mb-2 border-0">
                       <b-card-text class="above-title">Sudah Banyak Pasien Yang Berlangganan</b-card-text>
                       <b-card-text class="text-subtitle">Data Pasien yang sudah terdaftar lebih dari 13.826+ Pasien</b-card-text>
                     </b-card>
@@ -268,13 +268,13 @@
                 </b-row>
                 <b-row>
                   <b-col>
-                    <b-card img-src="https://drive.google.com/uc?export=view&id=1bC9v6nNv6ZndRbCT5OmXGKnyZCmQeyM2" img-alt="Image" img-top tag="article" style="max-width: 20rem" class="mb-2" border-0>
+                    <b-card img-src="https://drive.google.com/uc?export=view&id=1bC9v6nNv6ZndRbCT5OmXGKnyZCmQeyM2" img-alt="Image" img-top tag="article" style="max-width: 20rem" class="mb-2 border-0">
                       <b-card-text class="above-title">Memiliki Banyak Promosi</b-card-text>
                       <b-card-text class="text-subtitle">Setiap ada event - event besar memiliki promosi cek terus instagramnya untuk mendapatkan informasi lebih efektif</b-card-text>
                     </b-card>
                   </b-col>
                   <b-col>
-                    <b-card img-src="https://drive.google.com/uc?export=view&id=1LfDJvOcvhlfS8nm38i19UfTvU-78L8AD" img-alt="Image" img-top tag="article" style="max-width: 20rem" class="mb-2" border-0>
+                    <b-card img-src="https://drive.google.com/uc?export=view&id=1LfDJvOcvhlfS8nm38i19UfTvU-78L8AD" img-alt="Image" img-top tag="article" style="max-width: 20rem" class="mb-2 border-0">
                       <b-card-text class="above-title">Harga Terjangkau</b-card-text>
                       <b-card-text class="text-subtitle">Pelayanan dokter gigi dengan harga terjangkau</b-card-text>
                     </b-card>
@@ -293,9 +293,61 @@
         </ul> -->
       </section>
 
-      <section class="fullpage red">
-        <h1>Section 3</h1>
-        <p>works on <b>desktop & mobile</b></p>
+      <section class="fullpage">
+        <div class="container mt-5">
+          <div>
+            <p class="above-title text-size-large" style="text-align: center">Our Portofolio</p>
+            <p class="text-subtitle" style="text-align: center">Portofolio Ria Dental Care Cabang Botania dan Batu Aji</p>
+            <b-row align-h="between">
+              <b-col cols="4">
+                <b-card img-src="http://riadentalcare.com/asset-user/images/rdc1.jpeg" img-height="250px" img-alt="Image" img-top tag="article" style="max-width: 20rem; transform: translateZ(-100px)" class="mb-2 border-0">
+                  <b-card-text class="above-title text-center">Dentist Room</b-card-text>
+                </b-card>
+              </b-col>
+              <b-col cols="4">
+                <b-card img-src="http://riadentalcare.com/asset-user/images/new/rdc3.jpeg" img-height="250px" img-alt="Image" img-top tag="article" style="max-width: 20rem; transform: translateZ(-100px)" class="mb-2 border-0">
+                  <b-card-text class="above-title text-center">Lobby Room</b-card-text>
+                </b-card>
+              </b-col>
+              <b-col cols="4">
+                <b-card img-src="http://riadentalcare.com/asset-user/images/new/rdc5.jpeg" img-height="250px" img-alt="Image" img-top tag="article" style="max-width: 20rem; transform: translateZ(-100px)" class="mb-2 border-0">
+                  <b-card-text class="above-title text-center">Receptionist</b-card-text>
+                </b-card>
+              </b-col>
+            </b-row>
+            <b-row align-h="between">
+              <b-col cols="4">
+                <b-card img-src="http://riadentalcare.com/asset-user/images/new/rdc4.jpeg" img-height="250px" img-alt="Image" img-top tag="article" style="max-width: 20rem; transform: translateZ(-100px)" class="mb-2 border-0">
+                  <b-card-text class="above-title text-center">RDC Room</b-card-text>
+                </b-card>
+              </b-col>
+              <b-col cols="4">
+                <b-card img-src="http://riadentalcare.com/asset-user/images/new/rdc6.jpeg" img-height="250px" img-alt="Image" img-top tag="article" style="max-width: 20rem; transform: translateZ(-100px)" class="mb-2 border-0">
+                  <b-card-text class="above-title text-center">Lobby Room</b-card-text>
+                </b-card>
+              </b-col>
+              <b-col cols="4">
+                <b-card img-src="http://riadentalcare.com/asset-user/images/rdc8.jpg" img-height="250px" img-alt="Image" img-top tag="article" style="max-width: 20rem; transform: translateZ(-100px)" class="mb-2 border-0">
+                  <b-card-text class="above-title text-center">Relationship</b-card-text>
+                </b-card>
+              </b-col>
+            </b-row>
+          </div>
+        </div>
+        <div class="container">
+          <div>
+            <p class="above-title text-size-large" style="text-align: center">Our Video</p>
+            <p class="text-subtitle" style="text-align: center">Video Promosi Ria Dental Care Cabang Botania dan Batu Aji</p>
+            <b-row class="my-5">
+              <b-col>
+                <iframe id="player" type="text/html" width="500" src="http://riadentalcare.com/asset-user/video/rdc1.mp4" frameborder="0"></iframe>
+              </b-col>
+              <b-col>
+                <iframe id="player" type="text/html" width="500" src="http://riadentalcare.com/asset-user/video/rdc2.mp4" frameborder="0"></iframe>
+              </b-col>
+            </b-row>
+          </div>
+        </div>
       </section>
       <section class="fullpage green">
         <h1>Section 4</h1>
@@ -535,6 +587,9 @@ h2 {
   /* top: 1rem; */
   width: 100%;
   height: 10%;
+  /* transform: translateZ(1000px); */
+  /* position: relative; */
+  z-index: +1;
   /* overflow: auto; */
 
   background-color: #fff;
