@@ -218,7 +218,7 @@
       </div>
 
       <section class="fullpage">
-        <div class="container p-5">
+        <div class="fullpage p-5 light-pink">
           <b-row align-h="between">
             <b-col>
               <img src="http://riadentalcare.com/asset-user/images/new/rdc1.jpeg" style="width: 100%" />
@@ -248,7 +248,7 @@
             </b-col>
           </b-row>
         </div>
-        <div class="fullpage aligning-items-between light-pink p-5">
+        <div class="fullpage aligning-items-between p-5">
           <b-row>
             <b-col>
               <div class="m-5">
@@ -294,7 +294,7 @@
       </section>
 
       <section class="fullpage">
-        <div class="container mt-5">
+        <div class="fullpage mt-5 light-pink">
           <div>
             <p class="above-title text-size-large" style="text-align: center">Our Portofolio</p>
             <p class="text-subtitle" style="text-align: center">Portofolio Ria Dental Care Cabang Botania dan Batu Aji</p>
@@ -340,18 +340,114 @@
             <p class="text-subtitle" style="text-align: center">Video Promosi Ria Dental Care Cabang Botania dan Batu Aji</p>
             <b-row class="my-5">
               <b-col>
-                <iframe id="player" type="text/html" width="500" src="http://riadentalcare.com/asset-user/video/rdc1.mp4" frameborder="0"></iframe>
+                <iframe id="player" type="text/html" width="500" src="http://riadentalcare.com/asset-user/video/rdc1.mp4" frameborder="0" controls></iframe>
               </b-col>
               <b-col>
-                <iframe id="player" type="text/html" width="500" src="http://riadentalcare.com/asset-user/video/rdc2.mp4" frameborder="0"></iframe>
+                <iframe id="player" type="text/html" width="500" src="http://riadentalcare.com/asset-user/video/rdc2.mp4" frameborder="0" controls></iframe>
               </b-col>
             </b-row>
           </div>
         </div>
       </section>
-      <section class="fullpage green">
-        <h1>Section 4</h1>
-        <p>Tutorial <a href="https://webdeasy.de/en/programming-vue-js-fullpage-scroll/?referer=cp-NVOEBL" target="_blank">here</a></p>
+      <section class="fullpage light-pink pt-5">
+        <b-row class="mx-5">
+          <b-col>
+            <div class="row">
+              <div class="col-lg-6">
+                <h2 class="footer-heading mb-4">Lokasi Ria Dental Care Botania</h2>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0529946416664!2d104.09443408517227!3d1.122253999181415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d9889efcefc0ed%3A0x8d3f8279ea61130a!2sRia%20Dental%20Care!5e0!3m2!1sen!2sid!4v1587619623656!5m2!1sen!2sid"
+                  width="100%"
+                  height="200"
+                  frameborder="0"
+                  style="border: 0"
+                  allowfullscreen=""
+                  aria-hidden="false"
+                  tabindex="0"
+                ></iframe>
+              </div>
+              <div class="col-lg-6">
+                <h2 class="footer-heading mb-4">Lokasi Ria Dental Care Batu Aji</h2>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.1589716948993!2d103.98276101475366!3d1.0416566992401628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d98dd262b65543%3A0xb6e83f920065f75b!2sRIA%20DENTAL%20CARE%20(BATUAJI)!5e0!3m2!1sen!2sid!4v1611822782832!5m2!1sen!2sid"
+                  width="100%"
+                  height="200"
+                  frameborder="0"
+                  style="border: 0"
+                  allowfullscreen=""
+                  aria-hidden="false"
+                  tabindex="0"
+                ></iframe>
+              </div>
+              <div class="col-lg-12">
+                <h2 class="footer-heading mb-4 mt-3">Lokasi Ria Dental Care Batu Nagoya</h2>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.014821943992!2d104.00967891475383!3d1.149902099161243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xab36cfa827ef6e2d!2zMcKwMDgnNTkuNyJOIDEwNMKwMDAnNDIuNyJF!5e0!3m2!1sen!2sid!4v1639020338719!5m2!1sen!2sid"
+                  width="100%"
+                  height="200"
+                  frameborder="0"
+                  style="border: 0"
+                  allowfullscreen=""
+                  aria-hidden="false"
+                  tabindex="0"
+                ></iframe>
+              </div>
+            </div>
+          </b-col>
+          <b-col>
+            <h2 class="footer-heading mb-4">Contact Ria Dental Care</h2>
+            <b-row>
+              <b-col cols="1">
+                <!-- <font-awesome-icon icon="fa-solid fa-user-secret" /> -->
+                <font-awesome-icon icon="fa-solid fa-house" />
+              </b-col>
+              <b-col>
+                <div class="text-subtitle">RDC Botania : <br />Ruko Pesona Niaga blok C no 7 Dekat plaza botania 1, didepan perumahan holliwood hill<br /></div>
+              </b-col>
+            </b-row>
+            <b-row>
+              <b-col cols="1">
+                <!-- <strong><i class="icon-home"></i></strong> -->
+                <font-awesome-icon icon="fa-solid fa-house" />
+              </b-col>
+              <b-col class="text-subtitle">RDC Batu Aji : <br />Ruko Batu Permata Blok B nomor 9, Batam City Depan SP Plaza sederetan Holland Bakery dan KFC<br /></b-col>
+            </b-row>
+            <b-row>
+              <b-col cols="1">
+                <strong><i class="icon-home"></i></strong>
+              </b-col>
+              <b-col class="text-subtitle">RDC Batu Nagoya : <br />Batam, Match River, Batu Ampar, Kota Batam, Kepulauan Riau 29444<br /></b-col>
+            </b-row>
+            <div class="row">
+              <div class="col-1">
+                <strong><i class="icon-phone"></i></strong>
+              </div>
+              <div class="text-subtitle">RDC Botania : <a href="tel:6285363127424">085363127424</a><br /></div>
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <strong><i class="icon-phone"></i></strong>
+              </div>
+              <div class="text-subtitle">RDC Batu Aji : <a href="tel:6282360190016">082360190016</a><br /></div>
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <strong><i class="icon-phone"></i></strong>
+              </div>
+              <div class="text-subtitle">RDC Nagoya : <a href="">Comming Soon</a><br /></div>
+            </div>
+            <div class="row">
+              <div class="col-1">
+                <strong><i class="icon-info-circle"></i></strong>
+              </div>
+              <div class="text-subtitle">Senin - Minggu : 11.00 - 20.00 WIB<br />Tanggal Merah : On Call</div>
+            </div>
+            <div class="my-5">
+              <a href="https://www.facebook.com/pages/Ria-Dental-Care/1942449082666485" class="pl-0 pr-3"><span class="icon-facebook" target="_blank"> Praktek Dokter Gigi Batam</span></a>
+              <a href="https://www.instagram.com/riadentalcare/" class="pl-3 pr-3" target="_blank"><span class="icon-instagram"> Ria Dental Care</span></a>
+            </div>
+          </b-col>
+        </b-row>
       </section>
     </div>
     <footer>
