@@ -217,9 +217,80 @@
         <div class="halfpage background blue"></div>
       </div>
 
-      <section class="fullpage black">
-        <h1>Section 2</h1>
-        <p>made with <a href="https://vuejs.org/" target="_blank">Vue.js</a></p>
+      <section class="fullpage">
+        <div class="container p-5">
+          <b-row align-h="between">
+            <b-col>
+              <img src="http://riadentalcare.com/asset-user/images/new/rdc1.jpeg" style="width: 100%" />
+            </b-col>
+            <b-col>
+              <!-- <h2 class="above-title">Ria Dental Care</h2> -->
+              <h3 class="mb-0 text-primary"><b>Ria Dental Care</b></h3>
+              <p>Ria Dental Care merupakan sebuah tempat Praktek Dokter Gigi yang dikelola oleh drg Ria Oktamilda yang memiliki 3 cabang sebagai berikut:</p>
+              <p></p>
+              <p>Ria Dental Care Botania<br />Alamat : Ruko Pesona Niaga blok C no 7 Dekat plaza botania 1, didepan perumahan holliwood hill</p>
+              <p>Ria Dental Care Batu Aji<br />Alamat : Ruko Batu Permata Blok B nomor 9, Batam City Depan SP Plaza sederetan Holland Bakery dan KFC</p>
+              <p>Ria Dental Care Nagoya<br />Alamat : Batam, Match River, Batu Ampar, Kota Batam, Kepulauan Riau 29444</p>
+              <p>Jadwal praktek sebagai berikut :</p>
+              <ul class="list-check list-unstyled mb-5">
+                <li>Senin - Minggu : 12.00 - 19.00 WIB</li>
+                <li>Tanggal Merah : On Call</li>
+              </ul>
+              <div class="d-flex align-items-center m-5">
+                <img src="http://riadentalcare.com/asset-user/images/person_1.jpg" width="100px" height="100px" class="rounded-circle" style="object-fit: cover" />
+                <div class="text pl-3">
+                  <div class="mx-3">
+                    <h3 class="mb-0 text-primary"><b>drg. Ria Oktamilda</b></h3>
+                    <span class="position">Owner</span>
+                  </div>
+                </div>
+              </div>
+            </b-col>
+          </b-row>
+        </div>
+        <div class="fullpage aligning-items-between light-pink p-5">
+          <b-row>
+            <b-col>
+              <div class="m-5">
+                <b-row>
+                  <b-col>
+                    <b-card img-src="https://drive.google.com/uc?export=view&id=1EyXunKbsAY8SWvFv58OcrE1tYlK6dn3_" img-alt="Image" img-top tag="article" style="max-width: 20rem" class="mb-2" border-0>
+                      <b-card-text class="above-title">Memiliki 3 Cabang</b-card-text>
+                      <b-card-text class="text-subtitle">Saat ini Ria Dental Care Memiliki 3 Cabang yaitu : Ria Dental Care Cabang Botania, Ria Dental Care Cabang Batu Aji, dan Ria Dental Care Cabang Batu Nagoya</b-card-text>
+                    </b-card>
+                  </b-col>
+                  <b-col>
+                    <b-card img-src="https://drive.google.com/uc?export=view&id=1PHChaOV4p62Hjs_d_w9QMOLy2w9L-t0H" img-alt="Image" img-top tag="article" style="max-width: 20rem" class="mb-2" border-0>
+                      <b-card-text class="above-title">Sudah Banyak Pasien Yang Berlangganan</b-card-text>
+                      <b-card-text class="text-subtitle">Data Pasien yang sudah terdaftar lebih dari 13.826+ Pasien</b-card-text>
+                    </b-card>
+                  </b-col>
+                </b-row>
+                <b-row>
+                  <b-col>
+                    <b-card img-src="https://drive.google.com/uc?export=view&id=1bC9v6nNv6ZndRbCT5OmXGKnyZCmQeyM2" img-alt="Image" img-top tag="article" style="max-width: 20rem" class="mb-2" border-0>
+                      <b-card-text class="above-title">Memiliki Banyak Promosi</b-card-text>
+                      <b-card-text class="text-subtitle">Setiap ada event - event besar memiliki promosi cek terus instagramnya untuk mendapatkan informasi lebih efektif</b-card-text>
+                    </b-card>
+                  </b-col>
+                  <b-col>
+                    <b-card img-src="https://drive.google.com/uc?export=view&id=1LfDJvOcvhlfS8nm38i19UfTvU-78L8AD" img-alt="Image" img-top tag="article" style="max-width: 20rem" class="mb-2" border-0>
+                      <b-card-text class="above-title">Harga Terjangkau</b-card-text>
+                      <b-card-text class="text-subtitle">Pelayanan dokter gigi dengan harga terjangkau</b-card-text>
+                    </b-card>
+                  </b-col>
+                </b-row>
+              </div>
+            </b-col>
+            <b-col>
+              <img src="http://riadentalcare.com/asset-user/images/new/rdc2.jpeg" />
+            </b-col>
+          </b-row>
+        </div>
+        <!-- <ul class="no-dot-list">
+          <li><div>Something</div></li>
+          <li><div>Something</div></li>
+        </ul> -->
       </section>
 
       <section class="fullpage red">
@@ -231,6 +302,9 @@
         <p>Tutorial <a href="https://webdeasy.de/en/programming-vue-js-fullpage-scroll/?referer=cp-NVOEBL" target="_blank">here</a></p>
       </section>
     </div>
+    <footer>
+      <div style="text-align: center">Copyright ©2022 All rights reserved | Designed by Aldi Irsan Majid</div>
+    </footer>
   </div>
 </template>
 
@@ -272,6 +346,7 @@ export default {
         this.offsets.push(sectionOffset);
       }
     },
+    someThingToDo() {},
     // handleMouseWheel: function(e) {
 
     //   if (e.wheelDelta < 30 && !this.inMove) {
@@ -383,7 +458,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
 }
 
@@ -421,6 +496,11 @@ body {
 .above-title {
   color: #42bfd0;
   font-weight: bold;
+}
+
+.text-subtitle {
+  color: #b8b5b5;
+  font-size: small;
 }
 
 .text-size-large {
@@ -520,7 +600,9 @@ h2 {
   align-items: center;
   flex-direction: column;
 }
-
+.aligning-items-between {
+  align-items: stretch;
+}
 h1 {
   font-size: 6em;
   margin: 0;
@@ -545,8 +627,8 @@ p {
   background-color: #ab4545;
 }
 
-section.black {
-  background-color: #000;
+.light-pink {
+  background-color: #fffde2;
 }
 
 .fullpage .turunsikit {
@@ -582,6 +664,7 @@ h1.black {
 }
 .no-dot-list {
   list-style-type: none;
+  display: inline-block;
 }
 .margin-bottom-large {
   margin-bottom: 15%;
